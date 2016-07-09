@@ -51,6 +51,7 @@ Plug 'godlygeek/tabular'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
+Plug 'leafgarland/typescript-vim'
 
 " Visuals
 Plug 'vim-airline/vim-airline'
@@ -70,7 +71,13 @@ let g:airline_left_sep = ''
 let g:airline_section_z = '%{g:airline_symbols.maxlinenr}%4l/%L:%3v'
 " Neomake
 autocmd! BufWritePost * Neomake
+" let g:neomake_sass_sasslint_maker = {
+"    \ 'args': ['--verbose', '-c .sass-lint.yml'],
+"    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+"    \ 'exe': 'sass-lint'
+"    \ }
 let g:neomake_coffee_enabled_makers = ['coffeelint']
+" let g:neomake_sass_enabled_makers = ['sasslint']
 " Instant Markdown Preview
 let g:instant_markdown_autostart = 0
 " Vim-Session
